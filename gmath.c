@@ -37,8 +37,8 @@ double * calculate_normal(struct matrix *polygons, int i) {
     double y2 = polygons->m[1][i+2];
     double z2 = polygons->m[2][i+2];
 
-    double A[] = {x0 - x1, y0 - y1, z0 - z1};
-    double B[] = {x2 - x1, y2 - y1, z2 - z1};
+    double A[] = {x2 - x1, y2 - y1, z2 - z1};
+    double B[] = {x0 - x1, y0 - y1, z0 - z1};
 
     double * N = malloc(sizeof(double) * 3);
     N[0] = A[1]*B[2] - A[2]*B[1];
